@@ -1,0 +1,101 @@
+<p>UPDATE USER</p>
+<div class="container-fluid">
+    <form [formGroup]="myForm" class="form" (ngSubmit)="onSubmit(myForm.value)">
+        <div class="form-group">
+          <div class="form-row">
+          <label for="dropdown">Select a user for upadte:</label>
+          <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event)">
+            <option selected>select a value</option>
+            <option *ngFor="let u of arrusers" [ngValue]="u.id">
+                  {{u.firstName}}
+            </option>
+          </select>
+          </div>
+            <div class="form-row"> 
+                <label for="first_name">First Name</label>
+                <input id="first_name" class="inputname" formControlName="first_name">
+                <div *ngIf="f['first_name'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['first_name'].errors['required']">
+                        First name is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" class="inputlastname" formControlName="last_name">
+                <div *ngIf="f['last_name'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['last_name'].errors['required']">
+                        Last name is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" class="email" formControlName="email">
+                <div *ngIf="f['email'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['email'].errors['required']">
+                        Email is required
+                    </div>
+                    <div style="border:3px dotted red;" *ngIf="f['email'].errors['email']">
+                        Invalid email format
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="phone_no">Phone Number</label>
+                <input id="phone_no" class="phone_no" formControlName="phone_no">
+                <div *ngIf="f['phone_no'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['phone_no'].errors['required']">
+                        Phone number is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="dob">Dob</label>
+                <input type="date" id="dob" class="dob" formControlName="dob">
+                <div *ngIf="f['dob'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['dob'].errors['required']">
+                        Date of birth is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="role">Role</label>
+                <input type="text" id="role" class="role" formControlName="role">
+                <div *ngIf="f['role'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['role'].errors['required']">
+                        Role is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="password" formControlName="password">
+                <div *ngIf="f['password'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['password'].errors['required']">
+                        Password is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="address">Address</label>
+                <input type="text" id="address" class="address" formControlName="address">
+                <div *ngIf="f['address'].errors">
+                    <div style="border:3px dotted red;" *ngIf="f['address'].errors['required']">
+                        Address is required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
