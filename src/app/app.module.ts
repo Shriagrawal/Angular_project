@@ -25,6 +25,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewUserComponent } from './components/view-user/view-user.component';
+import { ViewCategoryComponent } from './components/view-category/view-category.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,10 @@ import { MatIcon } from '@angular/material/icon';
     UpdateUserComponent,
     NavbarComponent,
     AdminAssessmentComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    ViewUserComponent,
+    ViewCategoryComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,8 @@ import { MatIcon } from '@angular/material/icon';
     MatStepperModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIcon
+    MatIcon,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),

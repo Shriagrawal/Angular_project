@@ -14,8 +14,9 @@ export class LoginComponent {
   allowed: boolean = false;
 
   constructor(private userService: AddUserService) {
-    this.arrUser = this.userService.getUsers();
-  }
+    this.userService.getUsers().subscribe(data=>{
+      this.arrUser = data
+    })   }
 
   onSubmit(form: any): void {
     const nameInput = form.value.name;

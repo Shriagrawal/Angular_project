@@ -71,4 +71,8 @@ export class AdminAssessmentComponent {
   QuestionsArray(): FormArray {
     return this.questionsForm.get('arrQuestion') as FormArray;
   }
+
+  reset(){
+    
+  }
 }

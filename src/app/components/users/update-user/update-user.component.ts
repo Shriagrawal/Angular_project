@@ -15,7 +15,9 @@ export class UpdateUserComponent {
   user : Users = new Users(" "," "," ",0," ");
 
   constructor(fb: FormBuilder, private userservice: AddUserService) {
-    this.arrusers = this.userservice.getUsers()
+    this.userservice.getUsers().subscribe(data=>{
+      this.arrusers = data
+    })    
      this.myForm = fb.group({
        'id' : [0],
        'first_name' : ['', Validators.required],
@@ -34,8 +36,13 @@ export class UpdateUserComponent {
   }
 
   onSubmit(frmValue: any): void {
-    this.userservice.updateUser(frmValue);
-    console.log(this.arrusers);
+    this.user.firstName = frmValue.first_name;
+    this.user.lastName = frmValue.last_name;
+    this.user.address = frmValue.address;
+    this.user.role = frmValue.role;
+    this.userservice.updateUser(this.user).subscribe(data => {
+      console.log(data);
+  })
   }
 
   onChangeType(evt:any)

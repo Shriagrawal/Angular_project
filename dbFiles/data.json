@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "address": {
+        "house_no": 25,
+        "street": "5th main",
+        "area": "Rajajinagar",
+        "country": "India",
+        "pincode": "11111"
+      }
+    },
+    {
+      "id": "2",
+      "firstName": "jane",
+      "address": {
+        "house_no": 25,
+        "street": "5th main",
+        "area": "Malleshawa",
+        "country": "India",
+        "pincode": "11111"
+      }
+    },
+    {
+      "id": "21",
+      "firstName": "Shristi",
+      "lastName": "agrawal",
+      "address": "1642,barhpura colony,sadar",
+      "role": "user"
+    },
+    {
+      "id": "211",
+      "firstName": "Shristi",
+      "lastName": "agrawal",
+      "address": "1642,barhpura colony,sadar",
+      "role": "user"
+    }
+  ],
+  "course_categories": [
+    {
+      "id": "1",
+      "catDescription": "software"
+    },
+    {
+      "id": "2",
+      "catDescription": "lifestyle"
+    }
+  ],
+  "assessment" : [
+    {
+      "id" : "1",
+      "assessmentName" : "Angular",
+      "assessmentNo" : "1",
+      "assesmentDate" : "20-06-2024",
+      "assessmentTime" : "1 Hour",
+      "facultyId" : "1",
+      "question" : ["What is Angular"]
+    }
+  ]
+}
