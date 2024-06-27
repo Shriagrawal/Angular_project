@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Users } from '../../../models/users';
 import { AddUserService } from '../../../services/user.service';
 
@@ -17,7 +17,7 @@ export class UpdateUserComponent {
   constructor(fb: FormBuilder, private userservice: AddUserService) {
     this.userservice.getUsers().subscribe(data=>{
       this.arrusers = data
-    })    
+    }) 
      this.myForm = fb.group({
        'id' : [0],
        'first_name' : ['', Validators.required],

@@ -1,1 +1,8 @@
-<p>add-category works!</p>
+<div class="container-fluid">
+<form [formGroup]="addCategoryForm" (ngSubmit)="addCategory(addCategoryForm.value)">
+<div class="formGroup">
+<label>Category Description</label>
+<input formControlName="catdescription">
+</div>
+</form>
+</div>

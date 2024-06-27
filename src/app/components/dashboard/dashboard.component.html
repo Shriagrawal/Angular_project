@@ -1,0 +1,11 @@
+<div class="card-container">
+  <div *ngFor="let each of dashboardItem.arrAssessments" class="card">
+    <div class="card-content">
+      <div class="card-description">
+       Assessment:{{each}},
+       Quantity: {{dashboardItem.quantity[each-1]}}
+      </div>
+      <button class="card-button" (click)="takeAssessment(each)">Take assessment</button>
+    </div>
+  </div>
+</div>

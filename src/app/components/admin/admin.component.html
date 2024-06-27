@@ -5,7 +5,8 @@
       <button class="nav-link" id="main-categories-tab" data-bs-toggle="tab" data-bs-target="#main-categories" type="button" role="tab" aria-controls="main-categories" aria-selected="false" style="color: black;">CourseCategories</button>
       <button class="nav-link" id="main-assessments-tab" data-bs-toggle="tab" data-bs-target="#main-assessments" type="button" role="tab" aria-controls="main-assessments" aria-selected="false" style="color: black;">Assessments</button>
       <button class="nav-link" id="main-scores-tab" data-bs-toggle="tab" data-bs-target="#main-scores" type="button" role="tab" aria-controls="main-scores" aria-selected="false" style="color: black;">AssessmentScore</button>
-      <button class="nav-link" id="main-reports-tab" data-bs-toggle="tab" data-bs-target="#main-reports" type="button" role="tab" aria-controls="main-reports" aria-selected="false" style="color: black;">Reports</button>
+      <button class="nav-link" id="main-attendance-tab" data-bs-toggle="tab" data-bs-target="#main-attendance" type="button" role="tab" aria-controls="main-attendance" aria-selected="false" style="color: black;">Attendance</button>
+
     </div>
   </nav>
  
@@ -23,14 +24,12 @@
       <div class="tab-content" id="inner-users-tabs-content">
         <div class="tab-pane fade show active" id="inner-view-user" role="tabpanel" aria-labelledby="inner-view-user-tab" tabindex="0">
           <div class="container mt-3">
-            <div class="row justify-content-end">
                 <div class="col-auto">
                   <app-view-user></app-view-user>
-                    <div class="input-group input-group-sm">
+                    <!-- <div class="input-group input-group-sm">
                         <input class="form-control" type="text" id="searchInput" placeholder="Search by name" onkeyup="filterData()">
-                    </div>
+                    </div> -->
                 </div>
-            </div>
         </div>      
           <div class="container text-center">
             <div class="row">
@@ -146,17 +145,16 @@
         <div class="nav nav-tabs" id="inner-assessments-tabs" role="tablist">
           <button class="nav-link active" id="inner-view-assessments-tab" data-bs-toggle="tab" data-bs-target="#inner-view-assessments" type="button" role="tab" aria-controls="inner-view-assessments" aria-selected="true">View assessments</button>
           <button class="nav-link" id="inner-add-assessments-tab" data-bs-toggle="tab" data-bs-target="#inner-add-assessments" type="button" role="tab" aria-controls="inner-add-assessments" aria-selected="false">Add assessments</button>
-          <button class="nav-link" id="inner-delete-assessments-tab" data-bs-toggle="tab" data-bs-target="#inner-delete-assessments" type="button" role="tab" aria-controls="inner-update-assessments" aria-selected="false">Delete assessments</button>
+          <button class="nav-link" id="inner-Update-assessments-tab" data-bs-toggle="tab" data-bs-target="#inner-Update-assessments" type="button" role="tab" aria-controls="inner-update-assessments" aria-selected="false">Update assessments</button>
         </div>
       </nav>
       <div class="tab-content" id="inner-assessments-tabs-content">
         <div class="tab-pane fade show active" id="inner-view-assessments" role="tabpanel" aria-labelledby="inner-view-assessments-tab" tabindex="0">
-        <!-- assessmentadmincomponent -->
         </div>
         <div class="tab-pane fade" id="inner-add-assessments" role="tabpanel" aria-labelledby="inner-add-assessments-tab" tabindex="0">
           <app-admin-assessment></app-admin-assessment>
         </div>
-        <div class="tab-pane fade" id="inner-delete-course" role="tabpanel" aria-labelledby="inner-delete-course-tab" tabindex="0">
+        <div class="tab-pane fade" id="inner-Update-course" role="tabpanel" aria-labelledby="inner-Update-course-tab" tabindex="0">
               </div>
             </div>
           </div>
@@ -167,22 +165,22 @@
         <div class="nav nav-tabs" id="inner-categories-tabs" role="tablist">
           <button class="nav-link active" id="inner-view-categories-tab" data-bs-toggle="tab" data-bs-target="#inner-view-categories" type="button" role="tab" aria-controls="inner-view-categories" aria-selected="true">View categories</button>
           <button class="nav-link" id="inner-add-categories-tab" data-bs-toggle="tab" data-bs-target="#inner-add-categories" type="button" role="tab" aria-controls="inner-add-categories" aria-selected="false">Add categories</button>
-          <button class="nav-link" id="inner-delete-categories-tab" data-bs-toggle="tab" data-bs-target="#inner-delete-categories" type="button" role="tab" aria-controls="inner-update-categories" aria-selected="false">Delete categories</button>
+          <button class="nav-link" id="inner-Update-categories-tab" data-bs-toggle="tab" data-bs-target="#inner-Update-categories" type="button" role="tab" aria-controls="inner-update-categories" aria-selected="false">Update categories</button>
         </div>
       </nav>
 
       <div class="tab-content" id="inner-categories-tabs-content">
 
-        <div class="tab-pane fade show active" id="inner-view-course" role="tabpanel" aria-labelledby="inner-view-course-tab" tabindex="0">
+        <div class="tab-pane fade show active" id="inner-view-categories" role="tabpanel" aria-labelledby="inner-view-course-tab" tabindex="0">
          <app-view-category></app-view-category>
         </div>
 
         <div class="tab-pane fade" id="inner-add-categories" role="tabpanel" aria-labelledby="inner-add-categories-tab" tabindex="0">
-        Add Categories
+        <app-add-category></app-add-category>
         </div>
 
-        <div class="tab-pane fade" id="inner-delete-categories" role="tabpanel" aria-labelledby="inner-delete-categories-tab" tabindex="0">
-        Delete category
+        <div class="tab-pane fade" id="inner-Update-categories" role="tabpanel" aria-labelledby="inner-Update-categories-tab" tabindex="0">
+         <app-update-category></app-update-category>
         </div>
 
       </div>
@@ -190,8 +188,25 @@
 
 
     <div class="tab-pane fade" id="main-scores" role="tabpanel" aria-labelledby="main-scores-tab" tabindex="0">
-      <p>Assessment scores content goes here.</p>
-    </div>
+      <nav>
+        <div class="nav nav-tabs" id="inner-scores-tabs" role="tablist">
+          <button class="nav-link active" id="inner-view-scores-tab" data-bs-toggle="tab" data-bs-target="#inner-view-scores" type="button" role="tab" aria-controls="inner-view-scores" aria-selected="true">View scores</button>
+          <button class="nav-link" id="inner-add-scores-tab" data-bs-toggle="tab" data-bs-target="#inner-add-scores" type="button" role="tab" aria-controls="inner-add-scores" aria-selected="false">Add scores</button>
+          <button class="nav-link" id="inner-Update-scores-tab" data-bs-toggle="tab" data-bs-target="#inner-Update-scores" type="button" role="tab" aria-controls="inner-update-scores" aria-selected="false">Update scores</button>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="inner-scores-tabs-content">
+
+        <div class="tab-pane fade show active" id="inner-view-scores" role="tabpanel" aria-labelledby="inner-view-scores-tab" tabindex="0">
+        </div>
+
+        <div class="tab-pane fade" id="inner-add-scores" role="tabpanel" aria-labelledby="inner-add-scores-tab" tabindex="0">
+        </div>
+
+        <div class="tab-pane fade" id="inner-Update-scores" role="tabpanel" aria-labelledby="inner-Update-scores-tab" tabindex="0">
+        </div>   
+     </div>
 
     <div class="tab-pane fade" id="main-reports" role="tabpanel" aria-labelledby="main-reports-tab" tabindex="0">
       <p>Reports content goes here.</p>
@@ -199,3 +214,13 @@
 
 
   </div>
+
+  <div class="tab-pane fade" id="main-attendance" role="tabpanel" aria-labelledby="main-attendance-tab" tabindex="0">
+    <nav>
+      <div>
+        <app-attendance></app-attendance>
+      </div>
+    </nav>
+
+
+</div>

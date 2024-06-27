@@ -1,0 +1,11 @@
+<div class="attendance-container" (logAttendance)="AttendanceMarked()">
+    <h2>Your attendance :</h2>
+    <div *ngFor="let each of arrAttendance" class="assessment-card">
+      <div class="card-header">
+        <h3>Assessment {{each.assessmentId}}</h3>
+        <button class="delete-button" (click)="deleteAssessment(each.assessmentId)">Delete</button>
+      </div>
+      <p><strong>Date and time:</strong> {{each.assessmentDate}}, {{each.assessmentTime}}</p>
+    </div>
+  </div>
+  

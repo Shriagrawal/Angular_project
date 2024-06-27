@@ -1,10 +1,17 @@
 <div class="container my-4">
-    <div id="cardContainer" class="row"></div>
+    <div id="cardContainer" class="row">
     <nav aria-label="Page navigation">
       <ul class="pagination justify-content-center mt-4" id="pagination">
         <div class="card" *ngFor="let ass of pagedData">
-          <div class="card-body">
+          <div class="card-body" style="height: 350px; width: 350px;">
             <h5 class="card-title">{{ ass.assessmentName }}</h5>
+            <img src={{ass.image}} style="overflow: hidden;">
+            <button (click)="addToCart(ass.id)">Add to cart</button>
+            <button (click)="viewDetails()">{{detailbuttontext}}</button>
+            <div *ngIf="showDetails">
+              <p> Date: {{ass.assesmentDate}}</p>
+              <p>Time: {{ass.assessmentTime}}</p>
+            </div>
           </div>
         </div>
       </ul>
@@ -24,7 +31,7 @@
         </nav>
       </div>
     </nav>
-    
+  </div>
   </div>
 
 

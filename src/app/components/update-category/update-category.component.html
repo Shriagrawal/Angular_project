@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <form [formGroup]="updateCatForm" (ngSubmit)="updateForm(updateCatForm.value)">
+      <select formControlName="id" (change)="change($event)">
+        <option value="">Select a category</option>
+        <option *ngFor="let cat of arrCat" [value]="cat.id">{{ cat.catDescription }}</option>
+      </select>
+      <div class="form-group">
+        <label>Category Description</label>
+        <input formControlName="Catdes" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

@@ -27,6 +27,11 @@ export class CategoryService {
     return this.httpclient.post<Category>(this.baseUrl + '/course_categories', JSON.stringify(c),this.httpHeader)
   }
 
+  updateCategory(c:Category):Observable<Category>{
+    var id = c.id
+    return this.httpclient.put<Category>(this.baseUrl + '/course_categories/' + id, JSON.stringify(c) , this.httpHeader);
+  }
+
   httpError(error:HttpErrorResponse){
     let msg='';
     if(error.error instanceof ErrorEvent){

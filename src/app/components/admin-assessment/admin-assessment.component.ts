@@ -14,7 +14,7 @@ export class AdminAssessmentComponent {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  tempAssessment : Assessment = new Assessment("",true,0,0,"","",0,[])
+  tempAssessment : Assessment = new Assessment("",true,0,0,"","",0,[],"",0)
 
   constructor(private _formBuilder: FormBuilder) {
     this.questionsForm = this._formBuilder.group({

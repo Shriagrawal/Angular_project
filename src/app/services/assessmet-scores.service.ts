@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { AssessmentScores } from '../models/assessmentscores';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AssessmetScoresService {
-  arrAssessment : AssessmentScores[] =[];
+  baseUrl : string='http://localhost:3000'
+  httpHeader={
+    headers:new HttpHeaders({
+      'Content-Type':'application/json'
+    })
+  }
   constructor() {
-    this.arrAssessment=[
-      new AssessmentScores(1,2,3,4),
-    ]
+       
    }
 }

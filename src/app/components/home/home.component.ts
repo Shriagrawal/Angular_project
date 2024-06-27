@@ -1,62 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AssessmentService } from '../../services/assessment.service';
-// import { Assessment } from '../../models/assessments';
+import { Assessment } from '../../models/assessment';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']  
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  //  arrAssessments : Assessment[] = []
-  // constructor(private assessmentService:AssessmentService){
-  //    this.arrAssessments = this.assessmentService.getAssessment()
-  // }
+export class HomeComponent implements OnInit {
+  arrAssessments: Assessment[] = [];
 
-  // isActive(active:string)
-  // {
-  //   if(active == "true")
-  //     {
-  //       return true;
-  //     }
-  //     else return false;
-  // }
+  constructor(private assessmentService: AssessmentService,public router:Router) {}
 
-  // displayDetails(aid:number)
-  // {
-  //   console.log(aid)
-  // }
-  //  choice: number = 0;
-
-  //  constructor() {}
-
-  //  nextChoice(): void {
-  //   this.choice += 1;
-
-  //   if(this.choice > 5) {
-  //     this.choice = 1;
-  //   }
-  //  }
-  // isBordered : boolean=false
-  // classObj = {
-  //   bordered: false
-  // };
-
-  // classList: string[]=[];
-
-  // constructor()
-  // {
-  //   this.isBordered = true;
-  //   this.classList = ['blue','red'];
-  //   this.toggleBorder();
-  // }
-
-  // toggleBorder() : void {
-  //   this.isBordered = ! this.isBordered;
-
-  //   this.classObj={
-  //     bordered : this.isBordered
-  //   }
-  // }
-
+  ngOnInit(): void {
+    this.assessmentService.getAssessment().subscribe(
+      (assessments: Assessment[]) => {
+        this.arrAssessments = assessments.slice(-3).reverse();
+      },
+      (error) => {
+        console.error('Failed to fetch assessments', error);
+      }
+    );
+  }
+  displayDetails(aid:number){
+    console.log("betee.moj krdi")
+    this.router.navigate(['viewassessmentdetails/' + aid])
+  }
 }
-

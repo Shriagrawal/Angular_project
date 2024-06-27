@@ -9,7 +9,8 @@
         "area": "Rajajinagar",
         "country": "India",
         "pincode": "11111"
-      }
+      },
+      "role": "trainee"
     },
     {
       "id": "2",
@@ -20,18 +21,19 @@
         "area": "Malleshawa",
         "country": "India",
         "pincode": "11111"
-      }
+      },
+      "role": "user"
     },
     {
       "id": "21",
       "firstName": "Shristi",
       "lastName": "agrawal",
       "address": "1642,barhpura colony,sadar",
-      "role": "user"
+      "role": "admin"
     },
     {
       "id": "211",
-      "firstName": "Shristi",
+      "firstName": "Ashita",
       "lastName": "agrawal",
       "address": "1642,barhpura colony,sadar",
       "role": "user"
@@ -45,17 +47,308 @@
     {
       "id": "2",
       "catDescription": "lifestyle"
+    },
+    {
+      "id": "21",
+      "catDescription": "UI/UX designing"
+    },
+    {
+      "id": "0",
+      "catDescription": "Corporate Slave"
     }
   ],
-  "assessment" : [
+  "assessment": [
     {
-      "id" : "1",
-      "assessmentName" : "Angular",
-      "assessmentNo" : "1",
-      "assesmentDate" : "20-06-2024",
-      "assessmentTime" : "1 Hour",
-      "facultyId" : "1",
-      "question" : ["What is Angular"]
+      "id": "1",
+      "assessmentName": "Angular",
+      "assessmentNo": "1",
+      "assesmentDate": "20-06-2024",
+      "assessmentTime": "1 Hour",
+      "facultyId": "1",
+      "question": [
+        0,
+        1,
+        2
+      ],
+      "image": "data:image/png;base64,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",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "assessmentName": "Golang",
+      "assessmentNo": "2",
+      "assesmentDate": "12-06-2024",
+      "assessmentTime": "2 Hour",
+      "facultyId": "2",
+      "question": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATcAAACiCAMAAAATIHpEAAABJlBMVEXt+fJ0zt0ArNf///8AqNYAqdYAAAD1/fPx+/P3/vR20+IAptX306Lp9e521OQ8t9uR1OXg7OVZwd7/2qdvytnS3Nbn+PLQ7u7c5+DL1M5SVVNgYl7b8/AAr9jf6uO5wLphtMJOlKBzdG/T0M82anNpwM7A6Ox5zOKe2uev4OmdoZuHiYTEzMZcrLl/gXw8fokuUVeoqKhwcHDf29vFwL81Y2uPeFqTlpHdvZFkVkKosa1YYGBOvd1AWV0+R0dDhJA2cn0nRksmV19FU1RZaGoYAAAzNjWZlJPx7+8oSE65s7IXKSxYnagRHR8cMTXHx8dKYmYpFw+FaUyokG9HPjHAqIG9m3N6aFNfV1AiTlWGfXw0QD5PU0tMXlpUSTniwJKggl45NS6x7zB5AAAMIUlEQVR4nO2daXfayBKGAQnUEkisArGZxeyrjY2xMWYJHsd2yDKOiWeSXCfz///E7ZbAdAsJO9Y5YYbW+4HkiA6RnlPVVdVdkhwOW7Zs2bL1WyWKwWBQhNr2ifxXFNxT4plaPZ9MJM6TyU6+XsvE5b3gtk/rX62g0qi1zi+67VyzGBGgIsVsM9fuXpy3+rKNzliikmkNu7msU5IEwbmSIEiSMzu6SfYV22nXFJTrw3FWIIjhEqRie1izyZES463JzJQZsjn1YzTMBKFdNvr9BtUEg0pcVuC8pdQmTUlY8lljVmzOmlkn/EqIvKnLvWFhNCpA29v22W9LSiZ50e1O8w052YbAND5FJ4lOiIwv394eHx92ukX4jZT7I+dEEcPZTsrbvoDtSM53i5IgCdmDq6bkFIoqn9u3nUJWwrC1O0eMpuuvbWRyzQPtG2mWpNLi5MRM4xO5gYYkjL9eL/nUxyuTO/jIrHRckFRwkDYCN+pRmJrs5RE2NJ9NihDCzRHGZ/9gAU46wA8zzO0Iuers3buCOhl+o9BTM2+Qzcya0k0WWtvNNcFnX+UCnfSYIdWJIJpjj0d12XZ/21fx2xXMZ6GHvvd4PDOIrf1Rx+dtVvXgju4wsz9SDe2d54PqsXXqkhFlCEPBCGI7QADO9XyukcEJOYjztkUwvVC5NT1opnM2W9Rxky8gN+hvHjS5NW8Zpj7s4L56ibgVGCYJh9RwR1UdWJqobpzr0ccN2puz+N7TRebWPmISkM973FEhT+kT89GDhAGtFzViMxQgDjLbvozfrr0kmsEiH9AntKsjlc8tOcFJl8whPHro2Sd5It1Ac23SmPn2J2iGQrMb9NfrfUSt9ZbkI3RVe2OGmL1pfgq/ikizK/rMDTpqqytITS08jo6ukV11MLtqRdTjqv/W9XEBOeqom8hQmPY6HPHWh2ZB87rsIXML+eBZxyfEp/iVYQ5beA53nFtkxMU/ew3qgoImuZ98p1VawpRhjm731/gIBbJcYJibZQUmfYtv+/y3JrFfWHrd7RofWPA7JUlXRySKT/V+NwO2ff7bkthbep305kjHR2oewMSkUMQL1KNp8angF3I1St10UWst9OaY4CON1MTE8z7SXkaLj51xBFuXy7aojApIe8kVCOGJz35n7BQinoVmUmTUvWy1Lru5CLGgGUnubfv8tyVlipEQIrnuZaej8pGy3SW3aVZbbBMk3Qq6MKVy1RIJ1ag4CYQGfQi5O99nldr93HcylpxGki5oDaggfmCwC4Nc8CzsC/tO5/MfYZ8v/MUYnNBtbPsCtqVG15hIbu7DFD4pGo4a01hlqcoUjLmNTjVg4bD655eZkVkKo9q2z39bMuHmzJ4gZF8eHk7m8M/wmbG9Ubj4tpAZN2F09/mh8/Hw8Prwr8/zB0Nzcwoz+hbJFzLjBnOSIUzk3h6jDaxZ0Th40LhIvpApN6cTLY209rH1j3Vl87RyM4mnTm2BhEEFxL45t2Ke0kLLNH9Ddf41w9Sf4ZaklJsjfmDqp9k88/HvBMN8bZqNoJibPDU1JmE2GUvZm4lxLKWcmzI1heJUGy/Nuy/p5pYwp/K8IglquSUjz+PZwI3WBbhg0rCCsrk9I3yd3Ob2con1DeHS5maq1X6Wze2X1B/Z3F6j/tgCN4FebpmuJW605m+OxhvTAvUl3GjdCAQbCvvnJU0VOjtExKAlbsKwIVM4wymZ1nliYsXevp38dd6nzFfFRuLu1Bf+boXb/8Jh3905VS2+YuZe3Yu3xO0T2mOdn9NkcUrCh/aUw0Mr3Lrabj5N2/by4+lndNGW5rcC/IXTszOauCn5R184PH+8sRJP2/en8DfomuDg/DY/O6+ZbgS+hNuofv54ct+nahdV6U0va/FMwUqdNarF+z3aEhElLgct1vW5migGqbK2pSytIwkzWhuSrK1b0njX7kL1pgVu9DYkBVtW9mXobUgKdqzsAzqzHUoXLoOW9p3pbXRQEja312hTX43NzVyKeR+XzW2D5KmF8pRibvELm9trZGlbBuVv1HKzNL/Rmvdu6Cd/iQRa6yyr3Ki9QctaXKD3hsANffgv4UbtDajW6gWp26CzP8RiH740pGonC9OepX7yIrV9XMG8+d1Xz0qYUZqGWNxfEAr0PUx1qYyFfWdhSOvzQ2AC9+313Ip0PmVblZJ89caM0Kb3eVwOsfbqjWfhitrH1UA1XuuowixPr5uifq5X3qElTWgtsjRlXtc5KFD67oUnKfnXpXAf6DY3aHBXr9hDlbo9Cu9cIBSsTX7Z4KRckt6cdym5/qs3aUmz7zTnIEvJrTe/aG1/9OgOCqpEuXM3ibzcV6XCz/BdnfbpzSE2hl/CPx5zL/RVKfttHvaFT+qUbp0uJWb+UW84+nnTfAE5oVi40x7heJahtzpFkq/UG47gx8+/m5ue6qO+WLEw7Dyi0T98viHVU5zY+xJ+ULnNHxOJb+2iyRORBEGK5G6+9zLx3j0cPX8IP1CdiQQvf8xPkJ8+TPuNeL/+fTKeFdXX/2n8tL8Jxdn45p98v6GgG0Ye0aNCfWdUpyJi/fMj8tP7FnoJhajE+7184mrSbedmzWY222zOcu3u5CqR7z29uFNunYXDp48JWjezNDWGD5DCP70lBTEoxzP9Wr2Vzyeh8vlWvdbPxGXsvph46/7z2TnlcSGYOT87m+pushLF4J4iq1LQO8V1/0but2q0viPlSWKj1m/8YjIm2m8Xt2XLli1btmzZ+tcJIG37JP5bAoDjo6lYLJaK8twGdhAsp8oGDAW4VCXkd7FQXpe/XDKBAjiQqgbKIahypRTlKUfHRSt+lnW7lnKz6co6OcBFq+U0HKeJ9bpDZnypEHAEXKxLJzZd4slRXKrs8rqJQW7WX9rk0zstvppeo6aSK3PYKBAts26DUd5QlEpwwBHyGlFD4EIrInzVbUQN2Vw6xm34/R0VSPlNeODgACibwUXDStSBA6m0OTbohGV1jgOOgaEnr8BR5qrPYFsSAYPNo1yuFGXgnsHmcqWhC3KhjdYG5R7spKcuEnxCyED4EIHNzbLogzjGVgAfILGhYW4veYyt7qDBgZJ/XQHg4Cr4ZO/2hqop6LnVEJ4Ae/18iQgJbLpcSkWjMZgo44f9u8cNpFjvmlzoOG5Z7CDGo+QfAH4RYmFBkC5XoyBNUKsCbjGsinPz7mBoiKZIwdo9BpNVDvdSb2WV9wNuAMvUNDQ/6M6El3rLWHUAgwpmreUdnOHAuuDBGA6kShZV5UpMsytHFIPLVohR0JBX36V3yN4AbyaHgzA3HRCV9OIvmLmxZd0oPoDNhNHfckm/Q1zFZSKYXQDMkNyhBZB1u+QwX1yf+7HfYGO7YnCEIxLUXGXgAFV27ZpBKqBXGSOzPvVjicwOBYbok/TfAMJN3YOluaWXa2srbTI3B6g8fb+TGZwqcucASy+Wlwwqm+oCd2A9YmJGu7PcyMvCk7cnN00bAjN3Uxq4Af8q6U3zxOTHalU5PuMZcTP60VVA3dE1EVB1pZdyhWA4La0gLVII3r8Jm8tl8KtYXGB3dEkEz3lR1otVnay60g1KG5YmTezNgYWN3cnfNongps5vXIg1CKIu3SjyR7BA4t/BOstAxPxWUe2tGnrSwICbQTzFAok7sJtuqhexGJJWiTyt0vG6dbnlKD0ZvryeOu+88KTDWyFMSb9QuUQTIMtTHvPSHV3wNRCxiuTGt/J4fDmTWHzDd6LJBaZdzd7WpcvWSotWD8ABzPtcbiLIspVlQwjgU/gWFz3mBqtX0glDJY6HM1sqkCYX3Iikjh2UAI9mwFiZCLrUzG5QXFm3KeMahEJ+FrdC9wDozBKOCpXLobR+84Yec3MA0uBUKvowCmsATr+fv57fsSH++f9udwQqmwsEreQ0XcVbgaRoclPFb95PZqsqD27j6hKa8xz0TG4LbeipWWIj09t1eUP0YdvQL+N2rZqM+A3NSCwl9RUp0/4s7wDvBuSrhi2DBk2Z1Miw2ZJNV8mOZy41MODLugLUNqlqzb24NblZf3Wt2xlwJT+ry/f8FQdlgZQU56iGXF6v2oLvdQ8CMUMjAlwsALNitEaHPv2BGM2t5JoA54iVKlDVWNT8dg4AuGipEggE0DDepqZq1TfyklE2M1u2bJnq/5MtWmsPBQOUAAAAAElFTkSuQmCC",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "assessmentName": "NodeJs",
+      "assessmentNo": "3",
+      "assesmentDate": "12-06-2024",
+      "assessmentTime": "30 mins",
+      "facultyId": "2",
+      "question": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "image": "data:image/png;base64,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",
+      "price": 900
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "arrAssessments": [
+        1,
+        2,
+        3
+      ],
+      "userId": "1",
+      "totalQuantity": 6,
+      "quantity": [
+        2,
+        2,
+        2
+      ],
+      "total": 1200
+    },
+    {
+      "id": "0",
+      "arrAssessments": [
+        1
+      ],
+      "quantity": [
+        1
+      ],
+      "userId": "0",
+      "totalQuantity": 1,
+      "total": 0
+    }
+  ],
+  "dashboard": [
+    {
+      "id": "0",
+      "arrAssessments": [
+        1,
+        3
+      ],
+      "quantity": [
+        1,
+        null,
+        2
+      ],
+      "userId": "0",
+      "totalQuantity": 3,
+      "total": 900
+    },
+    {
+      "id": "2",
+      "arrAssessments": [
+        1,
+        2,
+        3
+      ],
+      "quantity": [
+        3,
+        3,
+        3
+      ],
+      "userId": "2",
+      "totalQuantity": 3,
+      "total": 50
+    }
+  ],
+  "attendance": [
+    {
+      "id": "0fe6",
+      "userId": "2",
+      "assessmentId": "1",
+      "assessmentDate": "Thu Jun 27 2024 17:04:03 GMT+0530 (India Standard Time)",
+      "assessmentTime": ""
+    },
+    {
+      "id": "128a",
+      "userId": "2",
+      "assessmentId": "3",
+      "assessmentDate": "Thu Jun 27 2024 17:04:29 GMT+0530 (India Standard Time)",
+      "assessmentTime": ""
+    },
+    {
+      "id": "30bf",
+      "userId": "2",
+      "assessmentId": "1",
+      "assessmentDate": "Thu Jun 27 2024 17:18:26 GMT+0530 (India Standard Time)",
+      "assessmentTime": ""
+    }
+  ],
+  "Question": [
+    {
+      "id": "0",
+      "qText": "What is Angualr",
+      "options": [
+        "A programming language",
+        "A JavaScript framework for building web applications",
+        "A database management system",
+        "A CSS framework"
+      ],
+      "answer": 1,
+      "qtype": "MCQ",
+      "assessmentId": 1
+    },
+    {
+      "id": "1",
+      "qText": "Which command is used to create a new Angular project?",
+      "options": [
+        "ng new",
+        "ng create",
+        "ng init",
+        "ng generate"
+      ],
+      "answer": 0,
+      "qtype": "MCQ",
+      "assessmentId": 1
+    },
+    {
+      "id": "2",
+      "qText": "What decorator is used to define a component in Angular?",
+      "options": [
+        "@Service",
+        "@Module",
+        "@Component",
+        "@Directive"
+      ],
+      "answer": 2,
+      "qtype": "MCQ",
+      "assessmentId": 1
+    },
+    {
+      "id": "3",
+      "qText": "What is Node.js primarily used for?",
+      "options": [
+        "Front-end development",
+        "Back-end development",
+        "Database management",
+        "Designing web pages"
+      ],
+      "answer": 1,
+      "qtype": "MCQ",
+      "assessmentId": 3
+    },
+    {
+      "id": "4",
+      "qText": "Which module is used to create a web server in Node.js?",
+      "options": [
+        "http",
+        "webserver",
+        "network",
+        "server"
+      ],
+      "answer": 0,
+      "qtype": "MCQ",
+      "assessmentId": 3
+    },
+    {
+      "id": "5",
+      "qText": "How do you import a module in Node.js?",
+      "options": [
+        "import module from 'module';",
+        "include('module');",
+        "require('module');",
+        "load('module');"
+      ],
+      "answer": 2,
+      "qtype": "MCQ",
+      "assessmentId": 3
+    },
+    {
+      "id": "6",
+      "qText": "Which object in Node.js is used to manage the process' current working directory?",
+      "options": [
+        "__dirname",
+        "__filename",
+        "process.cwd()",
+        "process.pwd()"
+      ],
+      "answer": 2,
+      "qtype": "MCQ",
+      "assessmentId": 3
+    },
+    {
+      "id": "7",
+      "qText": "What is Go (Golang) primarily known for?",
+      "options": [
+        "System programming",
+        "Web development",
+        "Concurrent programming",
+        "Mobile app development"
+      ],
+      "answer": 2,
+      "qtype": "MCQ",
+      "assessmentId": 2
+    },
+    {
+      "id": "8",
+      "qText": "Which keyword is used to define a new package in Go?",
+      "options": [
+        "import",
+        "package",
+        "func",
+        "module"
+      ],
+      "answer": 1,
+      "qtype": "MCQ",
+      "assessmentId": 2
+    },
+    {
+      "id": "9",
+      "qText": "How do you declare a variable in Go?",
+      "options": [
+        "var x int",
+        "int x",
+        "declare x int",
+        "let x: int"
+      ],
+      "answer": 0,
+      "qtype": "MCQ",
+      "assessmentId": 2
+    },
+    {
+      "id": "10",
+      "qText": "What is the purpose of the 'go' keyword in Go?",
+      "options": [
+        "To start a new goroutine",
+        "To define a function",
+        "To import a package",
+        "To declare a variable"
+      ],
+      "answer": 0,
+      "qtype": "MCQ",
+      "assessmentId": 2
+    },
+    {
+      "id": "11",
+      "qText": "Which tool is used to format Go code?",
+      "options": [
+        "go tidy",
+        "go mod",
+        "gofmt",
+        "go clean"
+      ],
+      "answer": 2,
+      "qtype": "MCQ",
+      "assessmentId": 2
     }
   ]
 }

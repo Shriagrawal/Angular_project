@@ -1,4 +1,4 @@
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -6,7 +6,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+            <form (ngSubmit)="onSubmit(loginForm.value)" #loginForm="ngForm">
               <ol>
                 <li>
                   <label for="name">Name</label>
@@ -18,28 +18,13 @@
                   <input type="password" name="password" id="password" placeholder="password" ngModel required>
                 </li>
               </ol>
-              <button type="submit">Submit</button>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button class="btn btn-primary" type="submit" >Login</button>
+              </div>
             </form>
-            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button class="btn btn-primary" type="submit" form="myForm">Login</button>
           </div>
         </div>
       </div>
     </div>
-          <script>
-            document.getElementById('myForm').addEventListener('submit', function(event) {
-              event.preventDefault();
-              const nameInput = document.getElementById('name');
-              const passwordInput = document.getElementById('password');
-              
-              if (nameInput.value.trim() === '' || passwordInput.value.trim() === '') {
-                alert('Please fill out all input fields!');
-              } else {
-                console.log('EVENT TRIGGERED');
-              }
-            });
-          </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        

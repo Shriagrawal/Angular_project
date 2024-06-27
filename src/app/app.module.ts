@@ -29,6 +29,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { ViewCategoryComponent } from './components/view-category/view-category.component';
 import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { ViewAssessmentDetailsComponent } from './components/view-assessment-details/view-assessment-details.component';
+import { CartComponent } from './components/cart/cart.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddToDashboardDirective } from './directives/add-to-dashboard.directive';
+import { CurrencyPipe } from '@angular/common';
+import { AttendanceComponent } from './components/attendance/attendance.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +57,13 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
     QuestionsComponent,
     ViewUserComponent,
     ViewCategoryComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    ViewAssessmentDetailsComponent,
+    CartComponent,
+    UpdateCategoryComponent,
+    DashboardComponent,
+    AddToDashboardDirective,
+    AttendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,8 +79,9 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
-  ],
+    provideAnimationsAsync(),
+    CurrencyPipe
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
