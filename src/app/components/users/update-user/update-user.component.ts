@@ -6,43 +6,55 @@ import { AddUserService } from '../../../services/user.service';
 @Component({
   selector: 'app-update-user',
   templateUrl: './update-user.component.html',
-  styleUrl: './update-user.component.scss'
+  styleUrls: ['./update-user.component.scss']
 })
 export class UpdateUserComponent {
   myForm: FormGroup;
-  arrusers : Users[] = [];
+  arrusers: Users[] = [];
+  user: Users = new Users(" ", " ", " ", "", " ");
+  submitted = false;
   idUdpated : number=0;
-  user : Users = new Users(" "," "," ",0," ");
 
-  constructor(fb: FormBuilder, private userservice: AddUserService) {
-    this.userservice.getUsers().subscribe(data=>{
-      this.arrusers = data
-    }) 
-     this.myForm = fb.group({
-       'id' : [0],
-       'first_name' : ['', Validators.required],
-       'last_name': ['', Validators.required],
-       'email': ['', [Validators.required, Validators.email]],
-       'phone_no': ['', Validators.required],
-       'dob': ['', Validators.required],
-       'role': ['', Validators.required],
-       'password': ['', Validators.required],
-       'address': ['', Validators.required]
-     });
+  constructor(private fb: FormBuilder, private userservice: AddUserService) {
+    this.userservice.getUsers().subscribe(data => {
+      this.arrusers = data;
+    });
+
+    this.myForm = this.fb.group({
+      id: [0],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone_no: ['', Validators.required],
+      dob: ['', Validators.required],
+      role: ['', Validators.required],
+      password: ['', Validators.required],
+      address: ['', Validators.required]
+    });
   }
 
   get f() {
     return this.myForm.controls;
   }
 
-  onSubmit(frmValue: any): void {
+  onSubmit(): void {
+    this.submitted = true;
+
+    if (this.myForm.invalid) {
+      return;
+    }
+
+    const frmValue = this.myForm.value;
     this.user.firstName = frmValue.first_name;
     this.user.lastName = frmValue.last_name;
     this.user.address = frmValue.address;
     this.user.role = frmValue.role;
+
     this.userservice.updateUser(this.user).subscribe(data => {
       console.log(data);
-  })
+      alert("User Updated")
+      window.location.reload();
+    });
   }
 
   onChangeType(evt:any)
@@ -54,7 +66,7 @@ export class UpdateUserComponent {
 
     for(var i=0;i< this.arrusers.length;i++)
       {
-         if(this.idUdpated == this.arrusers[i].id)
+         if(this.idUdpated == JSON.parse(this.arrusers[i].id))
           {
             this.user = this.arrusers[i];
           }
@@ -66,4 +78,5 @@ export class UpdateUserComponent {
       this.myForm.get('role')?.setValue(this.user.role.toString());
   }
  
+
 }

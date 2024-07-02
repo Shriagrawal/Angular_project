@@ -1,37 +1,36 @@
 <div class="container my-4">
-    <div id="cardContainer" class="row">
-    <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center mt-4" id="pagination">
-        <div class="card" *ngFor="let ass of pagedData">
-          <div class="card-body" style="height: 350px; width: 350px;">
-            <h5 class="card-title">{{ ass.assessmentName }}</h5>
-            <img src={{ass.image}} style="overflow: hidden;">
-            <button (click)="addToCart(ass.id)">Add to cart</button>
-            <button (click)="viewDetails()">{{detailbuttontext}}</button>
-            <div *ngIf="showDetails">
-              <p> Date: {{ass.assesmentDate}}</p>
-              <p>Time: {{ass.assessmentTime}}</p>
-            </div>
+  <div id="cardContainer" class="row justify-content-center">
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let ass of pagedData">
+      <div class="card h-100 text-center" [style.backgroundColor]="ass.flag ? 'rgba(255, 255, 255, 0.9)' : 'rgba(128, 128, 128, 0.1)'">
+        <img class="card-img-top" src="{{ ass.image }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ ass.assessmentName }}</h5>
+          <div>
+            <button class="btn btn-primary mb-2" (click)="addToCart(ass.id)" [style.backgroundColor]="ass.flag ? 'rgba(0, 0, 255, 0.9)' : 'rgba(128, 128, 128, 0.1)'">Add to cart</button>
+            <button class="btn btn-primary mb-2" (click)="viewDetails()" [style.backgroundColor]="ass.flag ? 'rgba(0, 0, 255, 0.9)' : 'rgba(128, 128, 128, 0.1)'">{{ detailbuttontext }}</button>
+            <button class="btn btn-primary mb-2" *ngIf="admin" (click)="Toggle(ass.flag, ass.id)" [style.backgroundColor]="ass.flag ? 'rgba(0, 0, 255, 0.9)' : 'rgba(128, 128, 128, 0.1)'">{{ ass.flag ? 'Active' : 'Inactive' }}</button>
           </div>
+          <p class="card-text" *ngIf="showDetails">
+            <strong>Date:</strong> {{ ass.assesmentDate }}
+            <strong>Time:</strong> {{ ass.assessmentTime }}
+          </p>
         </div>
-      </ul>
-      <div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item" [class.disabled]="currentPage === 1">
-              <a class="page-link" (click)="changePage(currentPage - 1)" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item" *ngFor="let page of [1, 2, 3, 4]; let i = index" [class.active]="currentPage === (i + 1)">
-              <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
-            </li>
-            <li class="page-item" [class.disabled]="currentPage === 4">
-              <a class="page-link" (click)="changePage(currentPage + 1)">Next</a>
-            </li>
-          </ul>
-        </nav>
       </div>
-    </nav>
+    </div>
   </div>
-  </div>
+  
 
-
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center mt-4">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="changePage(currentPage - 1)" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item" *ngFor="let page of [1, 2, 3, 4]; let i = index" [class.active]="currentPage === (i + 1)">
+        <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === 4">
+        <a class="page-link" (click)="changePage(currentPage + 1)">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

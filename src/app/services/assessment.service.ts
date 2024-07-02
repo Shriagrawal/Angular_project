@@ -45,6 +45,17 @@ getPrice(id: number): Observable<number> {
   );
 }
 
+addAssessment(a:Assessment):Observable<Assessment>{
+  return this.httpclient.post<Assessment>(this.baseUrl + '/assessment',JSON.stringify(a),this.httpHeader)
+  .pipe(catchError(this.httpError));
+}
+
+updateAssessment(a:Assessment):Observable<Assessment>{
+  var id = a.id
+  return this.httpclient.put<Assessment>(this.baseUrl + '/assessment/' + id,JSON.stringify(a),this.httpHeader)
+  .pipe(catchError(this.httpError));
+}
+
 httpError(error:HttpErrorResponse){
   let msg='';
   if(error.error instanceof ErrorEvent){

@@ -1,17 +1,51 @@
 <div class="container form-container">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        email
+        placeholder="name@example.com"
+      />
+      <div *ngIf="contactForm.submitted && contactForm.controls['email']?.invalid" class="text-danger">
+        <div *ngIf="contactForm.controls['email']?.errors?.['required']">Email is required.</div>
+        <div *ngIf="contactForm.controls['email']?.errors?.['email']">Invalid email address.</div>
+      </div>
     </div>
     <div class="mb-4">
       <label for="exampleFormControlTextarea1" class="form-label">Query</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        [(ngModel)]="user.query"
+        name="query"
+        required
+        minlength="10"
+        rows="3"
+      ></textarea>
+      <div *ngIf="contactForm.submitted && contactForm.controls['query']?.invalid" class="text-danger">
+        <div *ngIf="contactForm.controls['query']?.errors?.['required']">Query is required.</div>
+        <div *ngIf="contactForm.controls['query']?.errors?.['minlength']">Query must be at least 10 characters long.</div>
+      </div>
     </div>
     <div class="mb-4">
-     <button>Submit</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-    <div class="map-container">
-      <b>Locate us :</b>
-      <iframe class="map_src" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5550992185777!2d77.56659377484185!3d13.000283187317743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17063d088663%3A0xdff39d6f78824598!2sSignDesk!5e0!3m2!1sen!2sin!4v1717475549154!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    </div>
+  </form>
+  <div class="map-container">
+    <b>Locate us :</b>
+    <iframe
+      class="map_src"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5550992185777!2d77.56659377484185!3d13.000283187317743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17063d088663%3A0xdff39d6f78824598!2sSignDesk!5e0!3m2!1sen!2sin!4v1717475549154!5m2!1sen!2sin"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>

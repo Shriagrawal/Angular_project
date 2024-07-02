@@ -6,7 +6,7 @@
       <button class="nav-link" id="main-assessments-tab" data-bs-toggle="tab" data-bs-target="#main-assessments" type="button" role="tab" aria-controls="main-assessments" aria-selected="false" style="color: black;">Assessments</button>
       <button class="nav-link" id="main-scores-tab" data-bs-toggle="tab" data-bs-target="#main-scores" type="button" role="tab" aria-controls="main-scores" aria-selected="false" style="color: black;">AssessmentScore</button>
       <button class="nav-link" id="main-attendance-tab" data-bs-toggle="tab" data-bs-target="#main-attendance" type="button" role="tab" aria-controls="main-attendance" aria-selected="false" style="color: black;">Attendance</button>
-
+      <!-- <button class="nav-link" id="main-Reports-tab" data-bs-toggle="tab" data-bs-target="#main-Reports" type="button" role="tab" aria-controls="main-Reports" aria-selected="false" style="color: black;">Reports</button> -->
     </div>
   </nav>
  
@@ -199,6 +199,7 @@
       <div class="tab-content" id="inner-scores-tabs-content">
 
         <div class="tab-pane fade show active" id="inner-view-scores" role="tabpanel" aria-labelledby="inner-view-scores-tab" tabindex="0">
+       <app-assessment-score></app-assessment-score>
         </div>
 
         <div class="tab-pane fade" id="inner-add-scores" role="tabpanel" aria-labelledby="inner-add-scores-tab" tabindex="0">
@@ -224,3 +225,11 @@
 
 
 </div>
+
+<!-- <div class="tab-pane fade" id="main-Reports" role="tabpanel" aria-labelledby="main-Reports-tab" tabindex="0">
+  <nav>
+    <div>
+<app-report></app-report>
+    </div>
+  </nav>
+</div> -->

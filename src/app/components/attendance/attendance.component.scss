@@ -5,6 +5,9 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: auto;
+    min-height: calc(100vh - 100px); /* Adjust based on the height of the navbar and footer */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-bottom: 50px; /* Ensure there's space for scrolling */
   }
   
   .attendance-container h2 {

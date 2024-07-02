@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit{
    login: boolean = true;
    logout : boolean = false;
    quantity : number = 0;
-
   constructor(private localstorage: LocalStorageService,private eventemitterservice:EventEmitterService){
   }
 ngOnInit(): void {

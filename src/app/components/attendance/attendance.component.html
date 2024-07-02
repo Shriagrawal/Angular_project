@@ -3,7 +3,7 @@
     <div *ngFor="let each of arrAttendance" class="assessment-card">
       <div class="card-header">
         <h3>Assessment {{each.assessmentId}}</h3>
-        <button class="delete-button" (click)="deleteAssessment(each.assessmentId)">Delete</button>
+        <button class="delete-button" (click)="deleteAssessment(each.id)">Delete</button>
       </div>
       <p><strong>Date and time:</strong> {{each.assessmentDate}}, {{each.assessmentTime}}</p>
     </div>

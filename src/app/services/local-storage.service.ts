@@ -31,7 +31,6 @@ export class LocalStorageService {
       }
       return "0";
    }
-
    loggedIn()
    {
      if(localStorage.getItem("nameInput")!=null)
@@ -41,5 +40,16 @@ export class LocalStorageService {
       else{
         return false;
       }
+   }
+   getRole()
+   {  const userName = localStorage.getItem("nameInput")
+    let role = ""
+    if(userName)
+      {
+        let u = this.arrUser.find(user => user.firstName == userName)
+        if(u)
+        role = u.role
+      }
+      return role;
    }
 }

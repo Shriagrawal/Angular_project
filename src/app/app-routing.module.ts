@@ -12,6 +12,8 @@ import { AdminGuard } from './Guards/admin_guard';
 import { ViewAssessmentDetailsComponent } from './components/view-assessment-details/view-assessment-details.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { QuestionsComponent } from './components/questions/questions.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ReportComponent } from './components/report/report.component';
 const routes: Routes = [
   {path:"aboutus",component:AboutUsComponent},
   {path:"home",component:HomeComponent},
@@ -23,7 +25,10 @@ const routes: Routes = [
   {path:"intro",component:IntroComponent},
   {path:"viewassessmentdetails/:id",component:ViewAssessmentDetailsComponent},
   {path:"dashBoard",component:DashboardComponent},
-  {path:"assessmentQuestions/:id",component:QuestionsComponent}
+  {path:"assessmentQuestions/:id",component:QuestionsComponent},
+  { path: 'report/:id', component: ReportComponent },
+  {path:"404",component:PageNotFoundComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

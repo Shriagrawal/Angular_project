@@ -21,5 +21,8 @@ arrQuestion : Question[] = []
   {
     return this.httpclient.get<Question>(this.baseUrl + '/Question/'+qid);
   }
+  getQuestion():Observable<Question[]>{
+    return this.httpclient.get<Question[]>(this.baseUrl + '/Question');
+  }
 
 }

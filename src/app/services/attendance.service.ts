@@ -22,4 +22,9 @@ export class AttendanceService {
   addAttendance(a:Attendance):Observable<Attendance>{
     return this.httpclient.post<Attendance>(this.baseUrl + '/attendance',JSON.stringify(a),this.httpHeader);
   }
+
+  deleteAttendance(id:string):Observable<Attendance>{
+    var idn = JSON.parse(id)
+   return this.httpclient.delete<Attendance>(this.baseUrl + '/attendance/' + idn)
+  }
 }

@@ -1,30 +1,31 @@
-  <mat-stepper [linear]="isLinear" #stepper>
-      <mat-step [stepControl]="questionsForm" *ngFor="let each of arrQuestions; let j=index">
-        <form [formGroup]="questionsForm" (ngSubmit)="nextClicked(questionsForm.value,j)">
-          <ng-template matStepLabel>Question</ng-template>
-          <div>
-            <strong>{{each.qText}}</strong>
-          </div>
-          <div *ngFor="let option of each.options; let i = index">
-            <label>
-              <input type="radio" [value]="i" formControlName="answer">{{option}}
-            </label>
-          </div>          
-          <div>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>    
+<mat-stepper [linear]="isLinear" #stepper>
 
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+  <mat-step [stepControl]="questionsForm" *ngFor="let each of arrQuestions; let j=index">
+    <form [formGroup]="questionsForm" (ngSubmit)="nextClicked(questionsForm.value,j)">
+      <ng-template matStepLabel>Question</ng-template>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-        <button type="submit" (click)="onSubmit()">Submit</button>
+        <strong>{{each.qText}}</strong>
       </div>
-    </mat-step>
+      <div *ngFor="let option of each.options; let i = index">
+        <label>
+          <input type="radio" [value]="i" formControlName="answer">{{option}}
+        </label>
+      </div>          
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>    
 
-  </mat-stepper>
-  
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset();">Reset</button>
+      <button type="submit" (click)="onSubmit()">Submit</button>
+    </div>
+  </mat-step>
+
+ 
+</mat-stepper>

@@ -1,0 +1,14 @@
+<div class="container mt-3">
+    <div class="row">
+        <div *ngFor="let score of arrScore" class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Assessment: {{ score.assessmentId }}</h5>
+                    <p class="card-text">Total Score: {{ score.score }}</p>
+                    <p style="font-weight: bold; color: green;">PASS</p>
+                    <button (click)="viewReport(score.assessmentId)" class="btn btn-primary">View Report</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

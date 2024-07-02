@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-  displayDetails(aid:number){
+  displayDetails(aid:string){
     console.log("betee.moj krdi")
     this.router.navigate(['viewassessmentdetails/' + aid])
   }

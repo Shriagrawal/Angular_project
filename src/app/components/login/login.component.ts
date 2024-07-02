@@ -1,43 +1,47 @@
 import { Component } from '@angular/core';
 import { Users } from '../../models/users';
 import { AddUserService } from '../../services/user.service';
-import { CanActivateFn } from "@angular/router";
 import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss'] // Note: Correct property name is styleUrls (with an 's')
 })
-
 export class LoginComponent {
   arrUser: Users[] = [];
   allowed: boolean = false;
 
-  constructor(private userService: AddUserService,private localstorage: LocalStorageService) {
-    this.userService.getUsers().subscribe(data=>{
-      this.arrUser = data
-    })   }
+  constructor(private userService: AddUserService, private localStorage: LocalStorageService) {
+    this.userService.getUsers().subscribe(data => {
+      this.arrUser = data;
+      console.log('Users data:', this.arrUser); 
+    });
+  }
 
   onSubmit(form: any): void {
-    console.log(form)
+    console.log('Form data:', form); 
     const nameInput = form.name;
     const user = this.arrUser.find(user => user.firstName.toLowerCase() === nameInput.toLowerCase());
 
-    if (user && user.role === 'admin') {
-      this.allowed = true;
-      localStorage.setItem("nameInput",nameInput);
-      alert('Welcome admin');
-    } else if(user && user.role === 'user'){
-      this.allowed = false;
-      localStorage.setItem("nameInput",nameInput);
-      alert('welcome user');
+    console.log('Found user:', user); 
+
+    if (user) {
+      localStorage.setItem("nameInput", nameInput);
+      if (user.role === 'admin') {
+        this.allowed = true;
+        alert('Welcome admin');
+      } else if (user.role === 'trainee') {
+        this.allowed = false;
+        alert('Welcome trainee');
+      }
+      else if(user.role === 'faculty')
+        {
+          alert('Welcome faculty')
+        }
+    } else {
+      alert('User not found');
     }
-    else{
-      alert('User not found')
-    }
+    window.location.reload()
   }
-
 }
-
-

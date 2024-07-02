@@ -17,7 +17,7 @@ export class CartComponent implements OnInit{
    cartItem : Cart = new Cart("","",[],[],0,0)
    cartItemAss : number[] = [];
    arrDash : userDashboard[] = [];
-   constructor(private cartservice : CartService,private localstorage:LocalStorageService,private eventemitterservice:EventEmitterService,public addtodashboardservice: AddToDashboardService){
+   constructor(private cartservice : CartService,private localstorage:LocalStorageService,private eventemitterservice:EventEmitterService,public addtodashboardservice: AddToDashboardService,public assService:AssessmentService){
     const userId = this.localstorage.getUserId()
   
     this.cartservice.getcart().subscribe(data=>{
@@ -45,21 +45,34 @@ export class CartComponent implements OnInit{
   }
 
 increaseQuantity(assId:number){
- 
+   this.cartItem.quantity[assId-1]++;
+   this.cartItem.totalQuantity++;
+  this.assService.getPrice(assId).subscribe(data =>{
+    this.cartItem.total += data
+    this.cartservice.updatecart(this.cartItem).subscribe()
+  }
+  )
 }
 
-decreaseQuantity(){
-    // this.cartItem.quantity--;
+decreaseQuantity(assId:number){
+  this.cartItem.quantity[assId-1]--;
+  this.cartItem.totalQuantity--;
+  this.assService.getPrice(assId).subscribe(data =>{
+    this.cartItem.total -= data
+    this.cartservice.updatecart(this.cartItem).subscribe
+  }
+)
 }
 
 onClickCheckOut(quan:number,cartItem:any)
 { 
+  alert("CheckedOut")
   this.cartservice.deleteCart(cartItem.id).subscribe(data=>{
     console.log("checkouted from the cart successfully....mic drop")
   })
   this.eventemitterservice.onCheckOut(quan);
   //add ho skta hai ya phir update ho skta hai dashboard 
-  const existingDashboard = this.arrDash.find(dash => dash.id == this.cartItem.id);
+  const existingDashboard = this.arrDash.find(dash => dash.id == cartItem.id);
 
   if(existingDashboard) // aldready hai dashboard too jo hai usmein push karo data
     {   //agar mein jo data aaya cartItme mein uske array ke upar loop lga du or phir check karu vo existing cart mein hai ya nhi
@@ -86,5 +99,6 @@ onClickCheckOut(quan:number,cartItem:any)
         console.log(data);
       })
     }
+    window.location.reload()
 }
 }

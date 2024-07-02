@@ -1,3 +1,20 @@
-#content {
-    background-color: #E1E5EB;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-navbar, app-footer {
+  flex: 0 0 auto;
+}
+
+app-content {
+  flex: 1 0 auto;
+  overflow-y: auto;
+}

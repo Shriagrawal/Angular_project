@@ -47,7 +47,8 @@ export class AddUserService {
   //   }
 
   updateUser(u:Users):Observable<Users>{
-  return this.httpClient.put<Users>(this.baseUrl + '/users',JSON.stringify(u),this.httpHeader)
+    var id = u.id
+  return this.httpClient.put<Users>(this.baseUrl + '/users/' + id,JSON.stringify(u),this.httpHeader)
   .pipe(catchError(this.httpError));
   }
 

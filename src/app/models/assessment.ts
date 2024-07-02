@@ -3,16 +3,16 @@ import { Question } from "./question"
 export class Assessment{
     assessmentName : string
     flag : boolean
-    id : number
+    id : string
     assessmentNo : number
     assesmentDate : string
-    assessmentTime : string
+    assessmentTime : number
     facultyid : number 
     question : number[] = []
     image : string
     price : number
     
-    constructor(aName:string,answer:boolean,idno:number,asno:number,asdate:string,astime:string,facid:number,question:number[],img:string,price:number){
+    constructor(aName:string,answer:boolean,idno:string,asno:number,asdate:string,astime:number,facid:number,question:number[],img:string,price:number){
         this.assessmentName = aName
         this.flag = answer
         this.id = idno

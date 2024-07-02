@@ -36,6 +36,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddToDashboardDirective } from './directives/add-to-dashboard.directive';
 import { CurrencyPipe } from '@angular/common';
 import { AttendanceComponent } from './components/attendance/attendance.component';
+import { ReportComponent } from './components/report/report.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AssessmentScoreComponent } from './components/assessment-score/assessment-score.component';
+import { BaseChartDirective } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +69,9 @@ import { AttendanceComponent } from './components/attendance/attendance.componen
     DashboardComponent,
     AddToDashboardDirective,
     AttendanceComponent,
+    ReportComponent,
+    PageNotFoundComponent,
+    AssessmentScoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +83,8 @@ import { AttendanceComponent } from './components/attendance/attendance.componen
     MatFormFieldModule,
     MatInputModule,
     MatIcon,
-    HttpClientModule
+    HttpClientModule,
+    BaseChartDirective
   ],
   providers: [
     provideClientHydration(),

@@ -1,134 +1,126 @@
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    REGISTER HERE
-    </button>
-     -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog ">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Register Form</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Register Form</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <ol>
+              <li>
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" formControlName="first_name" placeholder="Enter Your First Name">
+                <div *ngIf="registerForm.get('first_name')?.invalid && (registerForm.get('first_name')?.dirty || registerForm.get('first_name')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('first_name')?.errors?.['required']">First Name is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" formControlName="last_name" placeholder="Enter Your Last Name">
+                <div *ngIf="registerForm.get('last_name')?.invalid && (registerForm.get('last_name')?.dirty || registerForm.get('last_name')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('last_name')?.errors?.['required']">Last Name is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="DOB">DOB</label>
+                <input type="date" id="DOB" formControlName="DOB" placeholder="Enter Your Date of Birth" required>
+                <div *ngIf="registerForm.get('DOB')?.invalid && (registerForm.get('DOB')?.dirty || registerForm.get('DOB')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('DOB')?.errors?.['required']">Date of Birth is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="Password">Password</label>
+                <input type="password" id="Password" formControlName="Password" placeholder="Enter Your Password" required>
+                <div *ngIf="registerForm.get('Password')?.invalid && (registerForm.get('Password')?.dirty || registerForm.get('Password')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('Password')?.errors?.['required']">Password is required.</small>
+                  <small class="text-danger" *ngIf="registerForm.get('Password')?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" formControlName="confirm_password" placeholder="Re-enter Your Password" required>
+                <div *ngIf="registerForm.get('confirm_password')?.invalid && (registerForm.get('confirm_password')?.dirty || registerForm.get('confirm_password')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('confirm_password')?.errors?.['required']">Confirm Password is required.</small>
+                  <small class="text-danger" *ngIf="registerForm.get('confirm_password')?.errors?.['minlength']">Confirm Password must be at least 6 characters long.</small>
+                </div>
+              </li>
+              <br>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Address</legend>
+            <ol>
+              <li>
+                <label for="h_no">House Number</label>
+                <input type="number" id="h_no" formControlName="h_no" placeholder="Enter Your House Number">
+                <div *ngIf="registerForm.get('h_no')?.invalid && (registerForm.get('h_no')?.dirty || registerForm.get('h_no')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('h_no')?.errors?.['required']">House Number is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="street">Street</label>
+                <input type="text" id="street" formControlName="street" placeholder="Enter Your Street Name">
+                <div *ngIf="registerForm.get('street')?.invalid && (registerForm.get('street')?.dirty || registerForm.get('street')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('street')?.errors?.['required']">Street is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="area">Area</label>
+                <input type="text" id="area" formControlName="area" placeholder="Enter Your Area Name">
+                <div *ngIf="registerForm.get('area')?.invalid && (registerForm.get('area')?.dirty || registerForm.get('area')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('area')?.errors?.['required']">Area is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="city">City</label>
+                <input type="text" id="city" formControlName="city" placeholder="Enter Your City Name">
+                <div *ngIf="registerForm.get('city')?.invalid && (registerForm.get('city')?.dirty || registerForm.get('city')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('city')?.errors?.['required']">City is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="state">State</label>
+                <input type="text" id="state" formControlName="state" placeholder="Enter Your State Name">
+                <div *ngIf="registerForm.get('state')?.invalid && (registerForm.get('state')?.dirty || registerForm.get('state')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('state')?.errors?.['required']">State is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="country">Country</label>
+                <input type="text" id="country" formControlName="country" placeholder="Enter Your Country Name">
+                <div *ngIf="registerForm.get('country')?.invalid && (registerForm.get('country')?.dirty || registerForm.get('country')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('country')?.errors?.['required']">Country is required.</small>
+                </div>
+              </li>
+              <br>
+              <li>
+                <label for="pincode">Pincode</label>
+                <input type="number" id="pincode" formControlName="pincode" placeholder="Enter Your Pincode">
+                <div *ngIf="registerForm.get('pincode')?.invalid && (registerForm.get('pincode')?.dirty || registerForm.get('pincode')?.touched)">
+                  <small class="text-danger" *ngIf="registerForm.get('pincode')?.errors?.['required']">Pincode is required.</small>
+                </div>
+              </li>
+              <br>
+            </ol>
+          </fieldset>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Register</button>
           </div>
-          <div class="modal-body">
-            <form method="post" id="myForm">
-              <fieldset>
-                <legend>Personal Information</legend>
-                <ol>
-                  <li>
-                    <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name" placeholder="Enter Your First Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" placeholder="Enter Your Last Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="DOB">DOB</label>
-                    <input type="date" name="DOB" id="DOB" placeholder="Enter Your Date of Birth" required>
-                  </li>
-                  <br>
-                  <li>
-                    <label for="Password">Password</label>
-                    <input type="password" name="Password" id="Password" placeholder="Enter Your Password" required>
-                  </li>
-                  <br>
-                  <li>
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter Your Password" required>
-                  </li>
-                  <br>
-                </ol>
-              </fieldset>
-              <fieldset>
-                <legend>Address</legend>
-                <ol>
-                  <li>
-                    <label for="h_no">House Number</label>
-                    <input type="number" name="h_no" id="h_no" placeholder="Enter Your House Number">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="street">Street</label>
-                    <input type="text" name="street" id="street" placeholder="Enter Your Street Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="area">Area</label>
-                    <input type="text" name="area" id="area" placeholder="Enter Your Area Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="city">City</label>
-                    <input type="text" name="city" id="city" placeholder="Enter Your City Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="state">State</label>
-                    <input type="text" name="state" id="state" placeholder="Enter Your State Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="country">Country</label>
-                    <input type="text" name="country" id="country" placeholder="Enter Your Country Name">
-                  </li>
-                  <br>
-                  <li>
-                    <label for="pincode">Pincode</label>
-                    <input type="number" name="pincode" id="pincode" placeholder="Enter Your Pincode">
-                  </li>
-                  <br>
-                </ol>
-              </fieldset>
-            </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" form="myForm">Register</button>
-            </div>
-          
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                const dob = document.getElementById('DOB');
-                const today = new Date();
-                const year = today.getFullYear();
-                const month = String(today.getMonth() + 1).padStart(2, '0'); 
-                const day = String(today.getDate()).padStart(2, '0');
-                const maxDate = `${year}-${month}-${day}`;
-          
-                dob.setAttribute('max', maxDate);
-              });
-          
-              document.getElementById('myForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-          
-                const dob = document.getElementById('DOB');
-                const passwordInput = document.getElementById('Password');
-                const confirmPasswordInput = document.getElementById('confirm_password');
-          
-                if (dob.value.trim() === '') {
-                  alert('Please enter your date of birth!');
-                  return;
-                } 
-          
-                if (passwordInput.value.trim() === '' || confirmPasswordInput.value.trim() === '') {
-                  alert('Please enter and confirm your password!');
-                  return;
-                }
-          
-                if (passwordInput.value !== confirmPasswordInput.value) {
-                  alert('Passwords do not match!');
-                  return;
-                }
-          
-                console.log('EVENT TRIGGERED');
-                
-              });
-            </script>
-            
-          
+        </form>
+      </div>
+    </div>
   </div>
-        </div>
-        </div>
-        </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</div>
