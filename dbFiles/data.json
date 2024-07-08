@@ -46,13 +46,6 @@
       "role": "trainee"
     },
     {
-      "id": "678961",
-      "firstName": "Miti",
-      "lastName": "Ma'am",
-      "address": "Indiqube Gamma, no 293/154/172 Outer Ring Road, Kadubeesanahalli, Marathahalli 560103, Bengaluru, Karnataka 560037",
-      "role": "faculty"
-    },
-    {
       "id": "678969",
       "firstName": "Greeshma",
       "lastName": "Agrawal",
@@ -62,7 +55,7 @@
     {
       "id": "6789",
       "firstName": "jiya",
-      "lastName": "Suchoritha",
+      "lastName": "mehta",
       "address": "Indiqube Gamma, no 293/154/172 Outer Ring Road, Kadubeesanahalli, Marathahalli 560103, Bengaluru, Karnataka 560037",
       "role": "faculty"
     }
@@ -95,7 +88,7 @@
       "assessmentName": "Angular",
       "assessmentNo": "1",
       "assesmentDate": "20-06-2024",
-      "assessmentTime": "3600",
+      "assessmentTime": "30 mins",
       "facultyid": "211",
       "question": [
         0,
@@ -204,18 +197,6 @@
       ],
       "price": 500,
       "flag": true
-    },
-    {
-      "id": "8",
-      "question": [],
-      "assessmentName": "Signdesk",
-      "flag": true,
-      "assessmentNo": 0,
-      "assesmentDate": "",
-      "assessmentTime": 0,
-      "facultyid": 6789,
-      "image": "",
-      "price": 20
     }
   ],
   "cart": [
@@ -261,9 +242,8 @@
         3
       ],
       "quantity": [
-        4,
-        5,
-        4
+        3,
+        1
       ],
       "userId": "2",
       "totalQuantity": 9,
@@ -279,30 +259,11 @@
       "userId": "1",
       "totalQuantity": 6,
       "quantity": [
-        1,
+        2,
         2,
         2
       ],
       "total": 1200
-    },
-    {
-      "id": "678961",
-      "arrAssessments": [
-        8
-      ],
-      "quantity": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        4
-      ],
-      "userId": "678961",
-      "totalQuantity": 5,
-      "total": 1000
     },
     {
       "id": "211",
@@ -326,14 +287,13 @@
         8
       ],
       "quantity": [
-        1,
-        3,
+        -3,
+        -1,
         null,
         null,
         null,
-        null,
-        null,
-        -1
+        -1,
+        null
       ],
       "userId": "6789",
       "totalQuantity": 5,
@@ -341,34 +301,6 @@
     }
   ],
   "attendance": [
-    {
-      "id": "1",
-      "userId": "2",
-      "assessmentId": "3",
-      "assessmentDate": "Fri Jun 28 2024 11:37:24 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "2",
-      "assessmentDate": "Fri Jun 28 2024 11:38:21 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "1",
-      "assessmentId": "2",
-      "assessmentDate": "Fri Jun 28 2024 11:38:21 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "3",
-      "assessmentId": "3",
-      "assessmentDate": "Fri Jun 30 2024 11:38:21 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
     {
       "id": "0",
       "userId": "0",
@@ -398,24 +330,10 @@
       "assessmentTime": ""
     },
     {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:13:50 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
       "id": "0",
       "userId": "0",
       "assessmentId": "2",
       "assessmentDate": "Mon Jul 01 2024 08:15:11 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:15:22 GMT+0530 (India Standard Time)",
       "assessmentTime": ""
     },
     {
@@ -440,279 +358,6 @@
       "assessmentTime": ""
     },
     {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:43 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:44 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:45 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:45 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:46 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:46 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:47 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:47 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:48 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:48 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:49 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:49 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:50 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:50 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:51 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:51 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:52 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:52 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:53 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:53 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:54 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:54 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:55 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:55 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:56 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:56 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:57 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:57 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:58 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:58 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:59 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:18:59 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:00 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:00 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:01 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:01 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:02 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:02 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "0",
-      "userId": "0",
-      "assessmentId": "2",
-      "assessmentDate": "Mon Jul 01 2024 08:19:03 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
       "id": "2",
       "userId": "2",
       "assessmentId": "1",
@@ -723,392 +368,7 @@
       "id": "2",
       "userId": "2",
       "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:51 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:52 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:53 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:54 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:55 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:56 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:57 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:58 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:19:59 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:00 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:01 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:02 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:03 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:04 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:05 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:06 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:07 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:08 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:09 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:10 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:11 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:12 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:13 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:14 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:15 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:16 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:17 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:18 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:19 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:20 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:21 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:22 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:23 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:24 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:25 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:26 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:27 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:28 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:29 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:30 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:31 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:32 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
       "assessmentDate": "Mon Jul 01 2024 08:20:33 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:34 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:35 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:36 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:20:37 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:06 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:07 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:07 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:09 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:14 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:15 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:16 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:29 GMT+0530 (India Standard Time)",
-      "assessmentTime": ""
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "assessmentId": "1",
-      "assessmentDate": "Mon Jul 01 2024 08:22:34 GMT+0530 (India Standard Time)",
       "assessmentTime": ""
     },
     {
@@ -1123,6 +383,13 @@
       "userId": "6789",
       "assessmentId": "2",
       "assessmentDate": "Tue Jul 02 2024 08:15:08 GMT+0530 (India Standard Time)",
+      "assessmentTime": ""
+    },
+    {
+      "id": "1",
+      "userId": "1",
+      "assessmentId": "2",
+      "assessmentDate": "Sun Jul 07 2024 15:32:23 GMT+0530 (India Standard Time)",
       "assessmentTime": ""
     }
   ],
@@ -1331,25 +598,11 @@
       "id": "2",
       "assessmentId": "1",
       "traineeId": 2,
-      "score": 0,
+      "score": 3,
       "ScoreArr": []
     },
     {
-      "id": "2",
-      "assessmentId": "1",
-      "traineeId": 2,
-      "score": 0,
-      "ScoreArr": []
-    },
-    {
-      "id": "2",
-      "assessmentId": "1",
-      "traineeId": 2,
-      "score": 0,
-      "ScoreArr": []
-    },
-    {
-      "id": 211,
+      "id": "211",
       "assessmentId": "2",
       "traineeId": 211,
       "score": 3,
@@ -1361,7 +614,7 @@
       ]
     },
     {
-      "id": 6789,
+      "id": "6789",
       "assessmentId": "2",
       "traineeId": 6789,
       "score": 1,
@@ -1371,6 +624,40 @@
         0,
         0
       ]
+    },
+    {
+      "id": "1",
+      "assessmentId": "2",
+      "traineeId": 1,
+      "score": 2,
+      "ScoreArr": [
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "Course": [
+    {
+      "id": "1",
+      "cName": "Angualar",
+      "cDescription": "Learn about basics of Angular"
+    },
+    {
+      "id": "2",
+      "cName": "DSA",
+      "cDescription": "fundamentals of DSa"
+    },
+    {
+      "id": "3",
+      "cName": "Maths",
+      "cDescription": "Basic triginometry"
+    },
+    {
+      "id": "4",
+      "cName": "Heat Dynamics",
+      "cDescription": "Basics of heat flux"
     }
   ]
 }

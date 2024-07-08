@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add Assessment Score</h2>
+    <form [formGroup]="assessmentForm" (ngSubmit)="onSubmit()">
+      <div class="form-row justify-content-center">
+        <div class="form-group col-md-6">
+          <label for="assessment_name" class="font-weight-bold">Assessment Name</label>
+          <input id="assessment_name" class="form-control" formControlName="assessment_name">
+        </div>  
+      </div>
+      <div class="form-row justify-content-center">
+        <div class="form-group col-md-6">
+          <label for="assessment_score" class="font-weight-bold">Assessment Score</label>
+          <input id="assessment_score" class="form-control" formControlName="assessment_score">
+        </div>
+      </div>
+      <div class="form-row justify-content-center" formArrayName="questions">
+        <div class="form-group col-md-6" *ngFor="let question of questions.controls; let i=index">
+          <label [for]="'question_' + i" class="font-weight-bold">Question {{ i + 1 }} Score</label>
+          <input [id]="'question_' + i" class="form-control" [formControlName]="i">
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="button" class="btn btn-secondary" (click)="addQuestion()">Add Question</button>
+        <button type="submit" class="btn btn-primary ml-2">Submit</button>
+      </div>
+    </form>
+  </div>
+  

@@ -40,7 +40,16 @@ import { ReportComponent } from './components/report/report.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AssessmentScoreComponent } from './components/assessment-score/assessment-score.component';
 import { BaseChartDirective } from 'ng2-charts';
-
+import { CountdownModule } from 'ngx-countdown';
+import { SearchFilterService } from './services/search-filter.service';
+import { ViewassessmentscoreComponent } from './components/viewassessmentscore/viewassessmentscore.component';
+import { ViewadminassessmentComponent } from './components/viewadminassessment/viewadminassessment.component';
+import { UpdateassessmentComponent } from './components/updateassessment/updateassessment.component';
+import { ViewcourseComponent } from './components/viewcourse/viewcourse.component';
+import { AddcourseComponent } from './components/addcourse/addcourse.component';
+import { UpdatecourseComponent } from './components/updatecourse/updatecourse.component';
+import { AddassessmentscoreComponent } from './components/addassessmentscore/addassessmentscore.component';
+import { UpdateassessmentscoreComponent } from './components/updateassessmentscore/updateassessmentscore.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +81,15 @@ import { BaseChartDirective } from 'ng2-charts';
     ReportComponent,
     PageNotFoundComponent,
     AssessmentScoreComponent,
+    SearchFilterService,
+    ViewassessmentscoreComponent,
+    ViewadminassessmentComponent,
+    UpdateassessmentComponent,
+    ViewcourseComponent,
+    AddcourseComponent,
+    UpdatecourseComponent,
+    AddassessmentscoreComponent,
+    UpdateassessmentscoreComponent
   ],
   imports: [
     BrowserModule,
@@ -84,12 +102,14 @@ import { BaseChartDirective } from 'ng2-charts';
     MatInputModule,
     MatIcon,
     HttpClientModule,
-    BaseChartDirective
+    BaseChartDirective,
+    CountdownModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    CurrencyPipe
+    CurrencyPipe,
+    SearchFilterService
     ],
   bootstrap: [AppComponent]
 })

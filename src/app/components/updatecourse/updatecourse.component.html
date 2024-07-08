@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Update Course</h2>
+    <form [formGroup]="updatecourseform" class="form" (ngSubmit)="onSubmit()">
+      <label>Select Course</label>
+    <select formControlName="id" id="id" (change)="onCourseChange($event)">
+      <option *ngFor="let course of arrcourses" [ngValue]="course.id">
+        {{ course.cName }}
+      </option>
+    </select>
+      <div class="form-row justify-content-center">
+        <div class="form-group col-md-6">
+          <label for="course_name" class="font-weight-bold">Course Name</label>
+          <input id="course_name" class="form-control" formControlName="course_name">
+        </div>  
+      </div>
+      <div class="form-row justify-content-center">
+        <div class="form-group col-md-6">
+          <label for="course_description" class="font-weight-bold">Course Description</label>
+          <textarea id="course_description" class="form-control" formControlName="course_description" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary px-5">Submit</button>
+      </div>
+    </form>
+  </div>
+  

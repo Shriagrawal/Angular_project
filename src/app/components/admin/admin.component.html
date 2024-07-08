@@ -51,91 +51,18 @@
         <div class="nav nav-tabs" id="inner-courses-tabs" role="tablist">
           <button class="nav-link active" id="inner-view-course-tab" data-bs-toggle="tab" data-bs-target="#inner-view-course" type="button" role="tab" aria-controls="inner-view-course" aria-selected="true">View Courses</button>
           <button class="nav-link" id="inner-add-user-tab" data-bs-toggle="tab" data-bs-target="#inner-add-course" type="button" role="tab" aria-controls="inner-add-course" aria-selected="false">Add Course</button>
-          <button class="nav-link" id="inner-delete-course-tab" data-bs-toggle="tab" data-bs-target="#inner-delete-course" type="button" role="tab" aria-controls="inner-update-course" aria-selected="false">Delete Course</button>
+          <button class="nav-link" id="inner-update-course-tab" data-bs-toggle="tab" data-bs-target="#inner-update-course" type="button" role="tab" aria-controls="inner-update-course" aria-selected="false">Update Course</button>
         </div>
       </nav>
       <div class="tab-content" id="inner-courses-tabs-content">
         <div class="tab-pane fade show active" id="inner-view-course" role="tabpanel" aria-labelledby="inner-view-course-tab" tabindex="0">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                1
-              </div>
-              <div class="col">
-                CSE
-              </div>
-              <div class="col">
-                <button>View</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                2
-              </div>
-              <div class="col">
-                MMAE
-              </div>
-              <div class="col">
-                <button>View</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                3
-              </div>
-              <div class="col">
-                EEE
-              </div>
-              <div class="col">
-                <button>View</button>
-              </div>
-            </div>
-          </div>
+         <app-viewcourse></app-viewcourse>
         </div>
         <div class="tab-pane fade" id="inner-add-course" role="tabpanel" aria-labelledby="inner-add-course-tab" tabindex="0">
-          Courses List:<br>
-          CSE<br>
-          MMAE<br>
-          EEE<br>
-          <br>
-          <button>ADD NEW COURSE</button>
+         <app-addcourse></app-addcourse>
         </div>
-        <div class="tab-pane fade" id="inner-delete-course" role="tabpanel" aria-labelledby="inner-delete-course-tab" tabindex="0">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col">
-                1
-              </div>
-              <div class="col">
-                CSE
-              </div>
-              <div class="col">
-                <button>Delete</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                2
-              </div>
-              <div class="col">
-                MMAE
-              </div>
-              <div class="col">
-                <button>Delete</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                3
-              </div>
-              <div class="col">
-                EEE
-              </div>
-              <div class="col">
-                <button>Delete</button>
-              </div>
-            </div>
-          </div>
+        <div class="tab-pane fade" id="inner-update-course" role="tabpanel" aria-labelledby="inner-update-course-tab" tabindex="0">
+          <app-updatecourse></app-updatecourse>
         </div>
       </div>
     </div>
@@ -150,12 +77,14 @@
       </nav>
       <div class="tab-content" id="inner-assessments-tabs-content">
         <div class="tab-pane fade show active" id="inner-view-assessments" role="tabpanel" aria-labelledby="inner-view-assessments-tab" tabindex="0">
+        <app-viewadminassessment></app-viewadminassessment>
         </div>
         <div class="tab-pane fade" id="inner-add-assessments" role="tabpanel" aria-labelledby="inner-add-assessments-tab" tabindex="0">
           <app-admin-assessment></app-admin-assessment>
         </div>
-        <div class="tab-pane fade" id="inner-Update-course" role="tabpanel" aria-labelledby="inner-Update-course-tab" tabindex="0">
-              </div>
+        <div class="tab-pane fade" id="inner-Update-assessments" role="tabpanel" aria-labelledby="inner-Update-assessments-tab" tabindex="0">
+      <app-updateassessment></app-updateassessment>
+        </div>
             </div>
           </div>
 
@@ -203,17 +132,17 @@
         </div>
 
         <div class="tab-pane fade" id="inner-add-scores" role="tabpanel" aria-labelledby="inner-add-scores-tab" tabindex="0">
+       <app-addassessmentscore></app-addassessmentscore>
         </div>
 
         <div class="tab-pane fade" id="inner-Update-scores" role="tabpanel" aria-labelledby="inner-Update-scores-tab" tabindex="0">
+       <app-updateassessmentscore></app-updateassessmentscore>
         </div>   
      </div>
 
     <div class="tab-pane fade" id="main-reports" role="tabpanel" aria-labelledby="main-reports-tab" tabindex="0">
       <p>Reports content goes here.</p>
     </div>
-
-
   </div>
 
   <div class="tab-pane fade" id="main-attendance" role="tabpanel" aria-labelledby="main-attendance-tab" tabindex="0">

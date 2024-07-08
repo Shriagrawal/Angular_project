@@ -1,1 +1,16 @@
-<p>view-assessment-details works!</p>
+<div class="container mt-5">
+    <div class="row align-items-start">
+      <div class="col-md-8">
+        <h5 class="assessment-name">{{ tempAssessment.assessmentName }}</h5>
+        <ul class="assessment-details">
+          <li>Date: {{ tempAssessment.assesmentDate }}</li>
+          <li>Time: {{ tempAssessment.assessmentTime }}</li>
+          <li>Price: {{ tempAssessment.price }}</li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-right">
+        <img [src]="tempAssessment.image" alt="Assessment Image" class="assessment-image">
+      </div>
+    </div>
+  </div>
+  

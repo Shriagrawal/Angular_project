@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Assessment } from '../../models/assessment';
@@ -10,6 +10,8 @@ import { Attendance } from '../../models/attendance';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { AssessmetScoresService } from '../../services/assessmet-scores.service';
 import { AssessmentScores } from '../../models/assessmentscores';
+import { MatStepper } from '@angular/material/stepper';
+import { CountdownComponent } from 'ngx-countdown';
 
 @Component({
   selector: 'app-questions',
@@ -17,6 +19,7 @@ import { AssessmentScores } from '../../models/assessmentscores';
   styleUrls: ['./questions.component.scss']
 })
 export class QuestionsComponent implements OnInit {
+  @ViewChild('countdown', { static: false }) private countdown!: CountdownComponent;
   assId: number = 0;
   assItem: Assessment = new Assessment("", true, "", 0, "", 0, 0, [], "", 0);
   arrQuestions: Question[] = [];
@@ -28,9 +31,6 @@ export class QuestionsComponent implements OnInit {
     answer: ['', Validators.required],
   });
   isLinear = false;
-  timer: any;
-  timeLeft: number = 0;
-
   constructor(
     private _formBuilder: FormBuilder,
     private activatedroute: ActivatedRoute,
@@ -49,45 +49,19 @@ export class QuestionsComponent implements OnInit {
   ngOnInit() {
     this.asservice.getAssessmentbyId(this.assId).subscribe(data => {
       this.assItem = data;
-      this.timeLeft = this.assItem.assessmentTime; 
       for (var i = 0; i < this.assItem.question.length; i++) {
         const qid = this.assItem.question[i];
         this.questionservice.getQuestionsbyId(qid).subscribe(data => {
           this.arrQuestions.push(data);
         });
       }
-      // this.startTimer();
     });
+
   }
 
-  // ngOnDestroy() {
-  //   if (this.timer) {
-  //     clearInterval(this.timer);
-  //   }
-  // }
 
-  // startTimer() {
-  //   this.timer = setInterval(() => {
-  //     if (this.timeLeft > 0) {
-  //       this.timeLeft--;
-  //     } else {
-  //       this.onSubmit();
-  //     }
-  //   }, 1000);
-  // }
 
-  // resetTimer() {
-  //   if (this.timer) {
-  //     clearInterval(this.timer);
-  //   }
-  //   this.timeLeft = this.assItem.assessmentTime;
-  //   this.startTimer();
-  // }
-
-  onSubmit() {
-    // if (this.timer) {
-    //   clearInterval(this.timer);
-    // }
+  onSubmit() {   
     this.tempAttendance.assessmentDate = new Date().toString();
     this.tempAttendance.assessmentId = this.assId;
     this.tempAttendance.userId = this.localstorageservice.getUserId();
@@ -122,4 +96,39 @@ export class QuestionsComponent implements OnInit {
       }
     });
   }
+  onStepChange() {
+    this.resetCountdown();
+  }
+
+  resetStepper(stepper: MatStepper, countdown: CountdownComponent) {
+    stepper.reset();
+    this.resetCountdown();
+  }
+
+  resetCountdown() {
+    this.countdown.config.leftTime = this.assItem.assessmentTime;
+    this.countdown.restart();
+  }
+
+  onCountdownFinished(){   
+    this.tempAttendance.assessmentDate = new Date().toString();
+    this.tempAttendance.assessmentId = this.assId;
+    this.tempAttendance.userId = this.localstorageservice.getUserId();
+    this.tempAttendance.id = this.localstorageservice.getUserId();
+    this.attendanceservice.addAttendance(this.tempAttendance).subscribe(data => {
+      console.log(data + " attendance marked");
+    });
+    this.tempAssessmentScore.ScoreArr = this.arrScore;
+    this.tempAssessmentScore.assessmentId = this.assId;
+    this.tempAssessmentScore.id = this.userId;
+    this.tempAssessmentScore.traineeId = this.userId;
+    for (var i = 0; i < this.tempAssessmentScore.ScoreArr.length; i++) {
+      this.tempAssessmentScore.score += this.tempAssessmentScore.ScoreArr[i];
+    }
+    this.assessmentscoreservice.addAssessmentScore(this.tempAssessmentScore).subscribe(data => {
+      console.log("assessmentScore has been added" + data);
+    });
+    alert("Congratulations! You have submitted the assignment successfully and have been marked for the same.");
+  }
+
 }

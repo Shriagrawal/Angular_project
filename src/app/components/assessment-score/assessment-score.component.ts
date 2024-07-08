@@ -23,6 +23,7 @@ export class AssessmentScoreComponent {
           console.log("filteredData"+filteredData);
         }
         )
+        
    }
 
    viewReport(assessmentId: number) {

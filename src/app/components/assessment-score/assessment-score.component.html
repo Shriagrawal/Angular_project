@@ -5,7 +5,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Assessment: {{ score.assessmentId }}</h5>
                     <p class="card-text">Total Score: {{ score.score }}</p>
-                    <p style="font-weight: bold; color: green;">PASS</p>
+                    <p style="font-weight: bold; color: green;">{{score.score >= (score.ScoreArr.length)/2 ? "Pass" : "Fail"}}</p>
                     <button (click)="viewReport(score.assessmentId)" class="btn btn-primary">View Report</button>
                 </div>
             </div>

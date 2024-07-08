@@ -28,7 +28,7 @@
               <br>
               <li>
                 <label for="DOB">DOB</label>
-                <input type="date" id="DOB" formControlName="DOB" placeholder="Enter Your Date of Birth" required>
+                <input type="date" id="DOB" formControlName="DOB" placeholder="Enter Your Date of Birth" [attr.max]="today" required>
                 <div *ngIf="registerForm.get('DOB')?.invalid && (registerForm.get('DOB')?.dirty || registerForm.get('DOB')?.touched)">
                   <small class="text-danger" *ngIf="registerForm.get('DOB')?.errors?.['required']">Date of Birth is required.</small>
                 </div>
@@ -39,7 +39,6 @@
                 <input type="password" id="Password" formControlName="Password" placeholder="Enter Your Password" required>
                 <div *ngIf="registerForm.get('Password')?.invalid && (registerForm.get('Password')?.dirty || registerForm.get('Password')?.touched)">
                   <small class="text-danger" *ngIf="registerForm.get('Password')?.errors?.['required']">Password is required.</small>
-                  <small class="text-danger" *ngIf="registerForm.get('Password')?.errors?.['minlength']">Password must be at least 6 characters long.</small>
                 </div>
               </li>
               <br>
@@ -48,9 +47,12 @@
                 <input type="password" id="confirm_password" formControlName="confirm_password" placeholder="Re-enter Your Password" required>
                 <div *ngIf="registerForm.get('confirm_password')?.invalid && (registerForm.get('confirm_password')?.dirty || registerForm.get('confirm_password')?.touched)">
                   <small class="text-danger" *ngIf="registerForm.get('confirm_password')?.errors?.['required']">Confirm Password is required.</small>
-                  <small class="text-danger" *ngIf="registerForm.get('confirm_password')?.errors?.['minlength']">Confirm Password must be at least 6 characters long.</small>
+                </div>
+                <div *ngIf="submitted && registerForm.errors" class="text-danger">
+                  <div *ngIf="registerForm.errors['passwordMismatch']">Passwords do not match</div>
                 </div>
               </li>
+              
               <br>
             </ol>
           </fieldset>

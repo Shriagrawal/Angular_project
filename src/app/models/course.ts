@@ -1,13 +1,10 @@
 export class Course{
-
-    id : number
+    id : string
     cName : string 
     cDescription : string
-
-    constructor(idno : number,cname: string,cdescription : string){
+    constructor(idno : string,cname: string,cdescription : string){
        this.cName = cname
        this.id = idno 
        this.cDescription = cdescription
     }
-
 }

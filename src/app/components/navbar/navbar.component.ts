@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Users } from '../../models/users';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { EventEmitterService } from '../../services/event-emitter.service';
+import { SearchFilterService } from '../../services/search-filter.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,8 @@ export class NavbarComponent implements OnInit{
    login: boolean = true;
    logout : boolean = false;
    quantity : number = 0;
-  constructor(private localstorage: LocalStorageService,private eventemitterservice:EventEmitterService){
+   searchTerm :string = ""
+  constructor(private localstorage: LocalStorageService,private eventemitterservice:EventEmitterService,private searchfilter:SearchFilterService){
   }
 ngOnInit(): void {
    this.eventemitterservice.putInDashboard.subscribe((quan:number)=>{
@@ -34,4 +36,10 @@ Login()
         this.logout = true;
     }
 }
+
+onSubmit()
+{
+   this.searchfilter.setSearchTerm(this.searchTerm);
+}
+
 }

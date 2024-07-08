@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AddUserService } from '../../services/user.service';
 import { Users } from '../../models/users';
 
@@ -11,13 +11,16 @@ import { Users } from '../../models/users';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup
   tempuser: Users = new Users("","","","","");
+  today: string = "";
+  submitted: boolean = false;
+
 
   constructor(private fb: FormBuilder, private userservice: AddUserService) {  this.registerForm = this.fb.group({
     first_name: ['', Validators.required],
     last_name: ['', Validators.required],
-    DOB: ['', Validators.required],
-    Password: ['', [Validators.required, Validators.minLength(6)]],
-    confirm_password: ['', [Validators.required, Validators.minLength(6)]],
+    DOB: ['', [Validators.required]],
+    Password: ['', [Validators.required]],
+    confirm_password: ['', [Validators.required]],
     h_no: ['', Validators.required],
     street: ['', Validators.required],
     area: ['', Validators.required],
@@ -25,13 +28,26 @@ export class RegisterComponent implements OnInit {
     state: ['', Validators.required],
     country: ['', Validators.required],
     pincode: ['', Validators.required]
-  });}
+  },{
+    validators: this.passwordMatchValidator
+  }
+);
+}
 
-  ngOnInit() {
-  
+  ngOnInit(): void {
+    const today = new Date();
+    this.today = today.toISOString().split('T')[0]; 
   }
 
+  passwordMatchValidator(group: FormGroup) {
+    const password = group?.get('Password')?.value ?? '';
+    const confirm_password = group?.get('confirm_password')?.value ?? '';
+    return password === confirm_password ? null : { passwordMismatch: true };
+  }
+  
+
   onSubmit() {
+    this.submitted = true
     if (this.registerForm.valid) {
       const formValue = this.registerForm.value;
       console.log(formValue);
